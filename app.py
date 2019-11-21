@@ -14,16 +14,20 @@ def home():
 def predict():
     a= request.form.get('eng-input')
     blob=tb(a)
-    rate= blob.translate(to='en')
-    output=rate
+    if blob.detect_language()== 'en':
+        output= a
+    else:
+        rate= blob.translate(to='en')
+        output=rate
     return render_template('app.html', prediction_text='TRANSLATED TEXT: {}'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
-    a= data.get('eng-input')
-    blob=tb(a)
-    rate= blob.translate(to='en')
-    output=rate
+    if blob.detect_language()== 'en':
+        output= a
+    else:
+        rate= blob.translate(to='en')
+        output=rate
     return jsonify(output)
 
 if __name__ == "__main__":
