@@ -7,12 +7,6 @@
 * flask
 * HTML, CSS
 
-### Demo
-https://ratemovie.herokuapp.com/
-
-<p align="center">
-  <img src="demo.png"/>
-</p>
 
 ### Project Structure
 This project has three major parts :
