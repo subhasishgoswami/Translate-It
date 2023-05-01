@@ -1,4 +1,4 @@
-﻿Flask==1.0.2
+Flask==2.3.2
 nltk==3.4.5
 singledispatch==3.4.0.3
 six==1.12.0
